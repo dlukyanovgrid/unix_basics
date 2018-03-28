@@ -1,0 +1,2 @@
+#!/bin/bash
+find -type f -size +10k -size -100k -exec ls -lh {} \; 2> /dev/null | awk '{ print $NF ": " $5 }' | sort -nk 2,2
